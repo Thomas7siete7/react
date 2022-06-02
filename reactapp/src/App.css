@@ -36,3 +36,59 @@
     transform: rotate(360deg);
   }
 }
+
+
+/*MIAS*/
+
+/* 1REM=10PX */
+html{
+	font-size: 62.5%;
+  background-color: #282c34;
+}
+
+.header{
+  margin-top: 1rem;
+  background-color: #faca0f;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.letras-nav,
+.subMenu{
+  font-size: 1.5rem;
+  text-decoration-line: none;
+  text-decoration: none;
+  list-style:none;
+}
+
+.container-menu{
+  position: relative;
+}
+
+.subMenu{
+  background-color: #c29c07;
+  position: absolute;
+  overflow: visible;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.container-menu:hover .subMenu{
+  opacity: 1;
+  visibility: visible;
+}
+
+.item{
+  font-size: 1.3rem;
+  color: aliceblue;
+}
+
+.ul{
+  width: 25rem;
+}
