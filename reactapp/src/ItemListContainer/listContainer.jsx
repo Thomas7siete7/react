@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { getCartas } from "../components/async";
+import ItemList from "../components/ItemList/ItemList";
 
 
 const Saludar=(param)=>{
@@ -14,10 +15,8 @@ const Saludar=(param)=>{
         
         <div>
             <h1 className="item">{param.mensaje}</h1>
-
-            <ul>
-                {cartas.map(carta=> <li key={carta.id}>{carta.numero}{' '}{carta.palo}</li>)}
-            </ul>
+            <ItemList carta={cartas}></ItemList>
+            
         </div>
         
 
