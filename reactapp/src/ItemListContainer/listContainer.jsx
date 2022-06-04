@@ -1,8 +1,8 @@
-const saludar=(param)=>{
+const Saludar=(param)=>{
     return(
         <h1 className="item">{param.mensaje}</h1>
 
     )
 }
 
-export default saludar;
+export default Saludar;

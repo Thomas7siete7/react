@@ -1,14 +1,14 @@
 
 import './App.css';
 import NAvBar from './components/NAvBar';
-import saludar from './ItemListContainer/listContainer';
+import Saludar from './ItemListContainer/ListContainer';
 
 function App() {
   return (
     <div className="App">
       
       <NAvBar/>
-      <saludar mensaje={'buenonas'}/>
+      <Saludar mensaje='Buenonassss'/>
       
     </div>
   );
