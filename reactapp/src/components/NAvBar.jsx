@@ -1,3 +1,5 @@
+import App from "../App";
+
 const NAvBar=()=>{
     return (
         <div>
@@ -17,6 +19,9 @@ const NAvBar=()=>{
                                 <li>Electrodomesticos</li>
                             </ul>
                         </li>
+
+                        <li><a href="#" className="letras-nav">Carrito</a></li>
+
                         <li><a href="#" className="letras-nav">Configuracion</a></li>
                     </ul>
                 </nav>
