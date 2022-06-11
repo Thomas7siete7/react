@@ -92,3 +92,23 @@ html{
 .ul{
   width: 25rem;
 }
+
+.orden{
+  display: flex;
+  justify-content: space-around;
+  list-style:none;
+}
+
+.fotos{
+  width: 25rem;
+  height: 20rem;
+}
+
+.titulo{
+  font-size: 3rem;
+  color: azure;
+}
+
+.precio{
+  color: beige;
+}
