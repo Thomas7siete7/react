@@ -24,7 +24,7 @@ export const getCartas=()=>{
 export const getCartasBy=(id)=>{
     return new Promise((resolve, reject) => {
        setTimeout(()=>{
-        resolve(cartas.find(cart=> cart.id=== id))
-       },1000) 
+            resolve(cartas.find(cart=> cart.id === id))
+       },100) 
     })
 }

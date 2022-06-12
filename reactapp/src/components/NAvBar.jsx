@@ -1,11 +1,14 @@
 import App from "../App";
+import { Link } from "react-router-dom";
 
 const NAvBar=()=>{
     return (
         <div>
             <header className="header">
                 <nav className="flex ">
-                    <a className="letras-nav" href="index.html">Comprax</a>
+                    <Link to='/'>
+                        <h3>Comprax</h3>
+                    </Link>
                     <ul className="flex ul letras-nav">
                         <li className="container-menu"><a href="#" className="letras-nav ">Perfil</a>
                             <ul className="subMenu">

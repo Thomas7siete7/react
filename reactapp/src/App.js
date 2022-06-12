@@ -16,11 +16,11 @@ function App() {
     <div className="App">
       {/* <Contar onAdd={handleAdd}/> */}
       <BrowserRouter>
-      <NAvBar/>
-      <Routes>
-        <Route path='/' element={<Saludar mensaje='Buenonassss'/>} />
-        <Route path='/carrito/:idCart' element={<ItemDetailContainer/>} />
-      </Routes>
+        <NAvBar/>
+        <Routes>
+          <Route path='/' element={<Saludar mensaje='Buenonassss'/>} />
+          <Route path='/detalle/:idCart' element={<ItemDetailContainer/>} />
+        </Routes>
       </BrowserRouter>
     </div>
   );

@@ -10,7 +10,7 @@ const Item=({id, palo, imagen, precio})=>{
             <h3 className="precio"> precio: ${precio} </h3>
 
             <footer>
-                <Link to={`/carrito/${id}`}>Ver Detalle</Link> 
+                <Link to={`/detalle/${id}`}>Ver Detalle</Link> 
             </footer>
         </li>
     )

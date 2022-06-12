@@ -8,6 +8,7 @@ const Saludar=(param)=>{
     useEffect( () => {
         getCartas().then(response=>{
             setCartas(response)
+            console.log(cartas, response)
         })
     }, [])
     

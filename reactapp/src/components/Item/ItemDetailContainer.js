@@ -1,24 +1,22 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useState, useEffect  } from "react";
 import { getCartasBy } from "../async";
 import ItemDetail from "./ItemDetail";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer=()=>{
-
-    const [cartas, setCartas]= useState()
-    const params= useParams()
+    const[cartas, setCartas] = useState()
+    const {idCart}= useParams()
 
     useEffect(()=>{
-        getCartasBy(params.idCart).then(resp=>{
-            setCartas(resp)
+        getCartasBy(Number(idCart)).then(response=>{
+            setCartas(response)
+            
         })
     }, [])
-
-    console.log(cartas)
-
+    console.log(idCart)
     return(
         <>
-        <ItemDetail {...cartas}/>
+            <ItemDetail {...cartas}/>
         </>
     )
 }

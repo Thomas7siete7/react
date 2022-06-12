@@ -1,9 +1,12 @@
 
 const ItemDetail=({palo, marca, precio})=>{
-
+    
+    console.log(marca, palo, precio)
     
 
     return(
+
+        
         <div className="mover flex">
             <div className="card">
                 <h2>Detalles del producto</h2>
