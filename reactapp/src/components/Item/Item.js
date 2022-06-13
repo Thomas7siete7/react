@@ -9,7 +9,7 @@ const Item=({id, palo, imagen, precio})=>{
             <h2 className="titulo">{palo}</h2>
             <h3 className="precio"> precio: ${precio} </h3>
 
-            <footer>
+            <footer className='footer'>
                 <Link to={`/detalle/${id}`}>Ver Detalle</Link> 
             </footer>
         </li>

@@ -62,11 +62,21 @@ html{
 
 }
 
+a:link, a:visited{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+h3{
+  color: #000;
+  font-size: 2rem;
+}
+
 .letras-nav,
 .subMenu{
   font-size: 1.5rem;
+  color: #000 !important;
   text-decoration-line: none;
-  text-decoration: none;
   list-style:none;
 }
 
@@ -100,12 +110,16 @@ html{
 .orden{
   display: flex;
   justify-content: space-around;
-  list-style:none;
+  flex-direction: row;
+  list-style: none;
+  flex-wrap: wrap;
 }
 
 .fotos{
   width: 25rem;
   height: 20rem;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
 }
 
 .titulo{
@@ -116,11 +130,13 @@ html{
 .precio{
   color: beige;
   border-bottom: 2px solid #acacac;
+  font-size: 2rem;
+  margin-top: -5rem;
 }
 
 .mover{
   flex-direction: column;
-  width: 100%;
+  width: 40rem;
   box-sizing: border-box;
   float: left;
   border-radius: 2rem;
@@ -128,8 +144,19 @@ html{
   box-shadow: 0 1.4rem 2.8rem rgba(0, 0, 0, 0.25), 0 1rem 1rem rgba(0, 0, 0, 0.22);
 }
 
+.alinear{
+  margin-top: 10rem;
+  width: 100% !important;
+}
+
 .card{
   background-color: antiquewhite;
   width: 40rem;
 
+}
+
+.footer{
+  color: aliceblue;
+  margin-top: -2rem;
+  font-size: 1.5rem;
 }

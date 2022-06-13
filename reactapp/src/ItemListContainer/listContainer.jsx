@@ -1,23 +1,49 @@
 import { useState, useEffect } from "react";
-import { getCartas } from "../components/async";
+import { getproductos, getproductosByTipo } from "../components/async";
 import ItemList from "../components/ItemList/ItemList";
+import { useParams } from "react-router-dom";
 
 
 const Saludar=(param)=>{
-    const[cartas, setCartas] = useState([])
-    useEffect( () => {
-        getCartas().then(response=>{
-            setCartas(response)
-            console.log(cartas, response)
-        })
-    }, [])
+    const[productos, setproductos] = useState([])
+    const [carga, setCarga]= useState(true)
+    const {tipoId}= useParams()
     
+
+    useEffect( () => {
+
+        setCarga(true)
+
+        if(!tipoId){
+            getproductos().then(response=>{
+                setproductos(response)
+            }).catch(error=>{
+                console.log(error)
+            }).finally(()=>{
+                setCarga(false)
+            })
+        }else{
+            getproductosByTipo(tipoId).then(response=>{
+                setproductos(response)
+                console.log(tipoId)
+            }).catch(error=>{
+                console.log(error)
+            }).finally(()=>{
+                setCarga(false)
+            })
+        }
+        
+    }, [tipoId])
+    
+    if(carga){
+        return <h1>Cargando...</h1>
+    }
 
     return(
         
         <div>
             <h1 className="item">{param.mensaje}</h1>
-            <ItemList carta={cartas}></ItemList>
+            <ItemList producto={productos}></ItemList>
             
         </div>
         
