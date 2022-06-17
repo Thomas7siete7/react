@@ -14,6 +14,8 @@ const NAvBar=()=>{
                         <Link to='/tipo/buzos'  >Buzos</Link>
                         <Link to='/tipo/pantalones'  >Pantalones</Link>
                     </ul>
+
+                    <h1></h1>
                 </nav>
             </header>
         </div>
