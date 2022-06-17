@@ -7,8 +7,8 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 function App() {
 
-  
-
+  const [carrito, setCarrito] = useState([])
+  console.log(carrito)
   return (
     <div className="App">
       {/* <Contar onAdd={handleAdd}/> */}
@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Saludar mensaje='Buenonassss'/>} />
           <Route path='/tipo/:tipoId' element={<Saludar mensaje='Buenonassss'/>} />
-          <Route path='/detalle/:idCart' element={<ItemDetailContainer/>} />
+          <Route path='/detalle/:idCart' element={<ItemDetailContainer carrito={carrito} setCarrito={setCarrito}/>} />
         </Routes>
       </BrowserRouter>
     </div>

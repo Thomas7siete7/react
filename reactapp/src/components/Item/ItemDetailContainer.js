@@ -3,7 +3,7 @@ import { getproductosBy } from "../async";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 
-const ItemDetailContainer=()=>{
+const ItemDetailContainer=({carrito, setCarrito})=>{
     const[productos, setproductos] = useState()
     const {idCart}= useParams()
 
@@ -13,10 +13,9 @@ const ItemDetailContainer=()=>{
             
         })
     }, [])
-    console.log(idCart)
     return(
         <>
-            <ItemDetail {...productos}/>
+            <ItemDetail {...productos} carrito={carrito} setCarrito={setCarrito}/>
         </>
     )
 }

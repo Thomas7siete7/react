@@ -6,7 +6,10 @@ const Contar=({onAdd})=>{
     const [count, setContar]= useState(0)
 
     const restar=()=>{
-        setContar(prev=> prev-1)
+        if(count>0){
+            setContar(prev=> prev -1)
+        }
+        
     }
 
     const sumar=()=>{
@@ -18,7 +21,7 @@ const Contar=({onAdd})=>{
            <button onClick={restar}>-</button>
             <h1>{count}</h1>
             <button onClick={sumar} >+</button> 
-            <button onClick={() => onAdd()}>agregar carrito</button>
+            <button onClick={() => onAdd(count)}>agregar carrito</button>
         </div>
             
     );
