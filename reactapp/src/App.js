@@ -19,6 +19,7 @@ function App() {
             <Route path='/' element={<Saludar mensaje='Buenonassss'/>} />
             <Route path='/tipo/:tipoId' element={<Saludar mensaje='Buenonassss'/>} />
             <Route path='/detalle/:idCart' element={<ItemDetailContainer />} />
+            <Route path='/lista' element={<h1>CARRITO</h1>} />
           </Routes>
         </BrowserRouter>
       </CarritoProvee>

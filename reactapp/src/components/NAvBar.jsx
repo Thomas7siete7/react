@@ -1,5 +1,6 @@
 import App from "../App";
 import { Link } from "react-router-dom";
+import CarritoWidget from "./carrito";
 
 const NAvBar=()=>{
     return (
@@ -15,7 +16,7 @@ const NAvBar=()=>{
                         <Link to='/tipo/pantalones'  >Pantalones</Link>
                     </ul>
 
-                    <h1></h1>
+                    <CarritoWidget/>
                 </nav>
             </header>
         </div>
