@@ -1,9 +1,14 @@
 import Contar from "../contador"
+import { useContext } from "react"
+import { Contexto } from "../../App"
+import CarContexto from "../../context/CarritoContext"
 
-const ItemDetail=({anime, marca, precio, tipo, carrito, setCarrito})=>{
+const ItemDetail=({id, anime, marca, precio, tipo})=>{
     
+    const {agProd} = useContext(CarContexto)
+
     const handleAdd = (cantidad)=>{
-        setCarrito([...carrito, {anime, marca, precio, tipo, cantidad}])
+        agProd([{id, anime, marca, precio, tipo, cantidad}])
       }
 
     return(
