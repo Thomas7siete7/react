@@ -2,12 +2,16 @@ import Contar from "../contador"
 import { useContext } from "react"
 import { Contexto } from "../../App"
 import CarContexto from "../../context/CarritoContext"
+import NotificacionContext from "../notificacion/Notificacion"
 
 const ItemDetail=({id, anime, marca, precio, tipo})=>{
     
     const {agProd} = useContext(CarContexto)
 
+    const setNotificacion=useContext(NotificacionContext)
+
     const handleAdd = (cantidad)=>{
+        setNotificacion('i', `se agregaron ${cantidad} ${tipo}`)
         agProd([{id, anime, marca, precio, tipo, cantidad}])
       }
 
