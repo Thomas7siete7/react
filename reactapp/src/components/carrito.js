@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import CarContexto from "../context/CarritoContext";
 
 const CarritoWidget=()=>{
@@ -7,9 +8,12 @@ const CarritoWidget=()=>{
     console.log(total)
     return (
         <div>
-            <h1>
-            carrito: {total}
-            </h1>
+            <Link to="lista/carrito">
+                <h1>
+                    carrito: {total}
+                </h1>
+            </Link>
+            
         </div>
     )
 }

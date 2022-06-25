@@ -25,6 +25,7 @@ export const CarritoProvee=({children})=>{
         const borrado = carrito.filter(prod => prod[i].id === id)
 
         setCarrito(borrado)
+        console.log(carrito)
     }
 
     const CarCantidad=()=>{
@@ -37,8 +38,19 @@ export const CarritoProvee=({children})=>{
         return cantidad
     }
 
+    const CarTotal=()=>{
+        let cantidad=0;
+        let total;
+        carrito.forEach(prod=>{
+            cantidad += (prod[i].cantidad)
+            total= cantidad*prod[i].precio
+            console.log(cantidad)
+        })
+        return total
+    }
+
     return(
-        <CarContexto.Provider value={{carrito, agProd, Borrar, CarCantidad}}>
+        <CarContexto.Provider value={{carrito, estaDentro, agProd, Borrar, CarCantidad, CarTotal}}>
             {children}    
         </CarContexto.Provider>
     )

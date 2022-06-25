@@ -41,7 +41,6 @@ const Saludar=(param)=>{
         <div>
             <h1 className="item">{param.mensaje}</h1>
             <ItemList producto={productos}></ItemList>
-            
         </div>
         
 

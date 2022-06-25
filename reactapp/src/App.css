@@ -98,7 +98,8 @@ h3{
   visibility: visible;
 }
 
-.item{
+.item,
+.tituloFinal{
   font-size: 1.3rem;
   color: aliceblue;
 }
@@ -160,4 +161,3 @@ h3{
   margin-top: -2rem;
   font-size: 1.5rem;
 }
-

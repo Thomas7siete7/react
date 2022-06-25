@@ -1,4 +1,4 @@
-import React, {useState, createContext} from 'react';
+import React from 'react';
 import './App.css';
 import NAvBar from './components/NAvBar';
 import Saludar from './ItemListContainer/ListContainer';
@@ -6,6 +6,7 @@ import ItemDetailContainer from './components/Item/ItemDetailContainer';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import { CarritoProvee } from './context/CarritoContext';
 import { NotificacionProvee } from './components/notificacion/Notificacion';
+import CarritoWeb from './components/Item/carro';
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
               <Route path='/' element={<Saludar mensaje='Buenonassss'/>} />
               <Route path='/tipo/:tipoId' element={<Saludar mensaje='Buenonassss'/>} />
               <Route path='/detalle/:idCart' element={<ItemDetailContainer />} />
-              <Route path='/lista' element={<h1>CARRITO</h1>} />
+              <Route path='/lista/:carro' element={<CarritoWeb/>} />
             </Routes>
           </BrowserRouter>
         </CarritoProvee>
