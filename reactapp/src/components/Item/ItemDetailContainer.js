@@ -1,5 +1,4 @@
 import { useState, useEffect  } from "react";
-import { getproductosBy } from "../async";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import { getDoc , doc} from "firebase/firestore";
