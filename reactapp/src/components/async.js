@@ -1,6 +1,6 @@
 const productos= [
     //remeras
-    {tipo: 'remeras', anime: 'SnK',  id:1, marca: 'GrafiZona', precio: 3630, imagen: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/903/627/products/hange1-0de43cdd60dab2a38516274843860378-480-0.jpg', link: 'https://www.grafizona.com.ar/productos/hange-zoe-remera-estilo-snk-anime-manga-cosplay-aesthetic/?variant=360379635' },
+    {tipo: 'remeras', anime: 'Shingeki no Kyojin',  id:1, marca: 'GrafiZona', precio: 3630, imagen: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/903/627/products/hange1-0de43cdd60dab2a38516274843860378-480-0.jpg', link: 'https://www.grafizona.com.ar/productos/hange-zoe-remera-estilo-snk-anime-manga-cosplay-aesthetic/?variant=360379635' },
     {tipo: 'remeras', anime: 'SnK',  id:2, marca: 'GrafiZona', precio: 3630, imagen: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/903/627/products/levi-negro1-42e28f8a3a7826b4a015991485548697-480-0.jpg', link: 'https://www.grafizona.com.ar/productos/levi-remera-shingeki-no-kyojin-estilo-anime-manga-cosplay-aesthetic/?variant=189569835' },
     {tipo: 'remeras', anime: 'Shingeki no Kyojin',  id:3, marca: 'OTAKUSTORE', precio: 2600, imagen: 'https://http2.mlstatic.com/D_NQ_NP_694015-MLA47182006592_082021-O.webp', link: 'https://articulo.mercadolibre.com.ar/MLA-935275005-remera-anime-attack-on-titan-erwin-smith683-_JM?searchVariation=95048889712#searchVariation=95048889712&position=8&search_layout=stack&type=item&tracking_id=b0c7561b-ba76-4421-86c7-15e41364146e' },
     

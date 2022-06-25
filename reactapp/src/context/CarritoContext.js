@@ -22,7 +22,7 @@ export const CarritoProvee=({children})=>{
     }
 
     const Borrar=({id})=>{
-        const borrado = carrito.filter(prod => prod[i].id == id)
+        const borrado = carrito.filter(prod => prod[i].id === id)
 
         setCarrito(borrado)
     }

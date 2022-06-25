@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
-import { getproductos, getproductosByTipo } from "../components/async";
 import ItemList from "../components/ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import { getDocs, collection, query, where } from "firebase/firestore";
+import { db } from "../servicios/firebase";
+
 
 
 const Saludar=(param)=>{
@@ -11,30 +13,25 @@ const Saludar=(param)=>{
     
 
     useEffect( () => {
-
         setCarga(true)
+        const collecion= (tipoId) ? (
+            query(collection(db, 'productos'),where ('tipo', '==', tipoId))
+        ):(collection(db, 'productos'))
 
-        if(!tipoId){
-            getproductos().then(response=>{
-                setproductos(response)
-            }).catch(error=>{
-                console.log(error)
-            }).finally(()=>{
-                setCarga(false)
+        getDocs(collecion).then(resp=>{
+            const prodRef=resp.docs.map(doc=>{
+                return {id:doc.id, ...doc.data()}
             })
-        }else{
-            getproductosByTipo(tipoId).then(response=>{
-                setproductos(response)
-                console.log(tipoId)
-            }).catch(error=>{
-                console.log(error)
-            }).finally(()=>{
-                setCarga(false)
-            })
-        }
-        
-    }, [tipoId])
+            setproductos(prodRef)
+        }).catch(error=>{
+            console.log(error)
+        }).finally(()=>{
+            setCarga(false)
+        })
     
+        
+    },[tipoId])
+
     if(carga){
         return <h1>Cargando...</h1>
     }
