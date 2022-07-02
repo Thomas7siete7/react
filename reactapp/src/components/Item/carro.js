@@ -1,14 +1,34 @@
-import { useState,useContext, useEfffect } from "react"
+
+import {useContext } from "react"
 import CarContexto from "../../context/CarritoContext"
 
+import {addDoc, collection} from 'firebase/firestore'
+import {db} from '../../servicios/firebase/index'
+
 const CarritoWeb=()=>{
-    const [carrito, setCarrito] = useState([])
-    console.log(carrito)
-    const {CarCantidad, CarTotal, Borrar} = useContext(CarContexto)
+    const {carrito, CarCantidad, CarTotal, Borrar} = useContext(CarContexto)
     const total=CarCantidad()
     const precio=CarTotal()
     
+    const Comprar=()=>{
+        console.log('comprado pápu')
 
+        const orden={
+            comprador:{
+            
+                nombre:'sd',
+                telefono: 1,
+                direccion: 'fd'
+            },
+            prod: carrito,
+            total: precio
+        }
+        console.log(orden)
+        const baseDatos= collection(db, 'ordenes')
+        addDoc(baseDatos, orden).then(({id})=>{
+            console.log(id)
+        })
+    }
     
     
 
@@ -23,7 +43,7 @@ const CarritoWeb=()=>{
                 <h3 className="tituloFinal">total: {precio}</h3>
                 <button onClick={Borrar}>Quitar</button>
 
-                <button>Comprar</button>
+                <button onClick={Comprar}>Comprar</button>
             </div>
 
         </div>

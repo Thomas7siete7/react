@@ -5,7 +5,6 @@ export const CarContexto = createContext()
 export const CarritoProvee=({children})=>{
 
     const [carrito, setCarrito] = useState([])
-    console.log(carrito)
     
     let i=0;
 
@@ -48,6 +47,8 @@ export const CarritoProvee=({children})=>{
         })
         return total
     }
+
+
 
     return(
         <CarContexto.Provider value={{carrito, estaDentro, agProd, Borrar, CarCantidad, CarTotal}}>

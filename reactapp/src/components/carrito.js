@@ -5,7 +5,6 @@ import CarContexto from "../context/CarritoContext";
 const CarritoWidget=()=>{
     const {CarCantidad} = useContext(CarContexto)
     const total=CarCantidad()
-    console.log(total)
     return (
         <div>
             <Link to="lista/carrito">
