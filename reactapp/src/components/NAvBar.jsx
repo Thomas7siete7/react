@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CarritoWidget from "./carrito";
+import Logear from "./Item/login";
 
 const NAvBar=()=>{
     return (
@@ -13,6 +14,7 @@ const NAvBar=()=>{
                         <Link to='/tipo/remeras'  >Remeras</Link>
                         <Link to='/tipo/buzos'  >Buzos</Link>
                         <Link to='/tipo/pantalones'  >Pantalones</Link>
+                        <Link to='/login/logear'>Login</Link>
                     </ul>
 
                     <CarritoWidget/>
