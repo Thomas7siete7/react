@@ -1,7 +1,6 @@
 
 import {useContext } from "react"
 import CarContexto from "../../context/CarritoContext"
-
 import {addDoc, collection} from 'firebase/firestore'
 import {db} from '../../servicios/firebase/index'
 
@@ -9,18 +8,20 @@ import {db} from '../../servicios/firebase/index'
 
 const CarritoWeb=()=>{
     const {carrito, CarCantidad, CarTotal, Borrar} = useContext(CarContexto)
+
     const carr= JSON.stringify(carrito)
     const total=CarCantidad()
     const precio=CarTotal()
     
+
     const Comprar=()=>{
         console.log('comprado pápu')
 
         const orden={
             comprador:{
-                nombre:'sd',
-                telefono: 1,
-                direccion: 'fd'
+                email: localStorage.getItem("email"),
+                telefono: localStorage.getItem("telefono"),
+                direccion: localStorage.getItem("direccion")
             },
             prod: carr,
             total: precio
